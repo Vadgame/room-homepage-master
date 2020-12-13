@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark-gray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+}
+body {
+    overflow: hidden;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+}
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 34vh;
+}
+p {
+    color: var(--dark-gray);
+}
+.leftPhoto {
+    width: 29.5vw;
+}
+.footer {
+    width: 39vw;
+    background-color: var(--white);
+    padding: 60px;
+}
+.footer h2 {
+    letter-spacing: 6px;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.footer p, .mainText p {
+    line-height: 25px;
+}
+.rightPhoto {
+    width: 31.5vw;
+}
+.mainText, .backgroundImage{
+    height: 66vh;
+    position: absolute;
+    top: 0;
+}
+.backgroundImage {
+    left: 0;
+    width: 59vw;
+}
+.mainText {
+    right: 0;
+    width: 41vw;
+    background-color: var(--white);
+    padding: 100px;
+}
+.mainText h1 {
+    font-weight: 700;
+    font-size: 42px;
+}
+.mainText p {
+    padding: 40px 0;
+}
+.shopButton {
+    letter-spacing: 12px; 
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.shopButton img {
+    padding-left: 30px;
+}
+.shopButton:hover {
+    color: var(--dark-gray);
+}
+.buttons {
+    width: 240px;
+    height: 150px;
+    position: absolute;
+    left: 59vw;
+    bottom: 34vh;
+    padding: 0;
+}
+.slideButton {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    border: none;
+    top: 0;
+    left: 0;
+    background-color: var(--very-dark-gray);
+}
+.slideButton img, .navBar img {
+    transform: scale(2);
+}
+.slideButton:nth-child(2) {
+    top: -100%;
+    left: 50%;
+}
+.slideButton:hover {
+    cursor: pointer;
+    background-color: var(--dark-gray);
+}
+.slideButton:focus {
+    outline: none;
+}
+.logo, .menu {
+    position: absolute;
+    top: 50px;
+}
+.logo {
+    left: 100px;
+}
+.menu {
+    left: 250px;
+}
+li {
+    display: inline-block;
+    width: 100px;
+}
+li a {
+    text-decoration: none;
+    padding: 8px;
+    color: var(--white);
+}
+li a:hover {
+    border-bottom: 4px solid var(--white);
+    border-radius: 2px;
+}
+.hamburger, .hamburger img, .close, .close img {
+    display: none;
+}
+@keyframes fade1 {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fade2 {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-height: 830px) {
+    .shopButton {
+        padding-left: 200px;
+    }
+}
+@media (max-height: 750px), (max-width: 1600px) {
+    body {
+        font-size: 12px;
+    }
+    .mainText h1 {
+        font-size: 26px;
+    }
+    .mainText p {
+        padding: 20px 0;
+    }
+    .footer h2 {
+        line-height: 40px;
+    }
+    .footer {
+        padding: 20px;
+        line-height: 20px;
+    }
+    .mainText {
+        padding: 60px;
+        line-height: 40px;
+    }
+    .slideButton img {
+        transform: scale(1);
+    }
+    .buttons {
+        width: 120px;
+        height: 75px;
+    }
+}
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto;
+    }
+    .backgroundImage, .mainText, footer, .leftPhoto, .footer, .rightPhoto, .navBar {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        top: 0;
+    }
+    .buttons {
+        position: absolute;
+        top: 43vh;
+        right: 0;
+        left: unset;
+    }
+    .mainText {
+        padding: 40px;
+        top: 600px;
+    }
+    .footer {
+        padding: 40px;
+        line-height: 20px;
+    }
+    footer {
+        top: 1050px;
+        bottom: unset;
+    }
+    .leftPhoto {
+        top: 0;
+    }
+    .footer {
+        top: 380px;
+    }
+    .rightPhoto {
+        top: 770px;
+    }
+    .navBar {
+        height: 70px;
+    }
+    .menu {
+        display: none;
+    }
+    .logo {
+        left: 45%;
+        transform: translateX(-50%);
+        top: 30px;
+    }
+    .hamburger img, .close img {
+        display: unset;
+    }
+    .hamburger, .close {
+        position: absolute;
+        left: 40px;
+        outline: none;
+        background-color: unset;
+        border: none;
+        width: 40px;
+        height: 40px;
+        top: 20px;
+    }
+    li {
+        width: 80px;
+        font-size: 12px;
+    }
+    li a {
+        color: var(--black);
+    }
+    li a:hover {
+        border-color: var(--black);
+    }
+    .menu {
+        top: 34px;
+        left: 22vw;
+    }
+    .hamburger {
+        display: unset;
+    }
+}
